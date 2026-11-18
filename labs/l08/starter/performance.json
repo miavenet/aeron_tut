@@ -1,0 +1,11 @@
+{
+  "samples": [
+    4,
+    8,
+    6,
+    10,
+    5
+  ],
+  "accepted": 5,
+  "delivered": 5
+}

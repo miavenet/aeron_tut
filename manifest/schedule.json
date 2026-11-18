@@ -1,0 +1,199 @@
+{
+  "auxiliary_delayed_required": [
+    "L01-R2",
+    "L01-T2",
+    "L02-R2",
+    "L02-T2",
+    "L01-R0",
+    "L01-T0",
+    "L03-R1",
+    "L03-T1",
+    "L03-R2",
+    "L03-T2",
+    "L04-R1",
+    "L04-T2",
+    "L05-R1",
+    "L05-T1",
+    "L06-R1",
+    "L06-T1",
+    "L07-R1",
+    "L07-T1",
+    "L08-R1",
+    "L08-T2"
+  ],
+  "core_budget_minutes": 403,
+  "delayed_check_scaffolds": {
+    "L01-R2": "independent",
+    "L02-R1": "starter",
+    "L02-R2": "starter",
+    "L03-R1": "completion",
+    "L03-R2": "independent",
+    "L04-R1": "starter",
+    "L04-T2": "independent",
+    "L05-R1": "completion",
+    "L05-R2": "independent",
+    "L06-R1": "completion",
+    "L06-R2": "independent",
+    "L07-R1": "completion",
+    "L07-R2": "independent",
+    "L08-R1": "independent",
+    "L08-R2": "independent",
+    "L08-T2": "transfer"
+  },
+  "delayed_exam_min_days_after_last_first_exposure": 7,
+  "exam_budget_minutes": 107,
+  "exam_cards": {
+    "WP1-JAVA:production": "L01-R0",
+    "WP1-JAVA:transfer": "L01-T0",
+    "WP1-O1:production": "L01-R2",
+    "WP1-O1:transfer": "L01-T1",
+    "WP1-O2-FRAMING:production": "L02-R2",
+    "WP1-O2-FRAMING:transfer": "L02-T2",
+    "WP1-O2-RETRY:production": "L02-R1",
+    "WP1-O2-RETRY:transfer": "L02-T1",
+    "WP4-O1:production": "L05-R1",
+    "WP4-O1:transfer": "L05-T1",
+    "WP5-O6:production": "L06-R1",
+    "WP5-O6:transfer": "L06-T1",
+    "WP5-O7:production": "L07-R1",
+    "WP5-O7:transfer": "L07-T1",
+    "lesson-03:production": "L03-R1",
+    "lesson-03:transfer": "L03-T1",
+    "lesson-04:production": "L04-R1",
+    "lesson-04:transfer": "L04-T2",
+    "lesson-08:production": "L08-R1",
+    "lesson-08:transfer": "L08-T2",
+    "WP1-O1:aux-L01-T2": "L01-T2",
+    "lesson-03:aux-L03-R2": "L03-R2",
+    "lesson-03:aux-L03-T2": "L03-T2"
+  },
+  "first_review_days": 1,
+  "lessons": {
+    "L01": {
+      "proposed_day": 1,
+      "sessions_minutes": [
+        19,
+        23,
+        21
+      ]
+    },
+    "L02": {
+      "proposed_day": 4,
+      "sessions_minutes": [
+        24,
+        24
+      ]
+    },
+    "L03": {
+      "proposed_day": 8,
+      "sessions_minutes": [
+        24,
+        23
+      ]
+    },
+    "L04": {
+      "proposed_day": 11,
+      "sessions_minutes": [
+        25,
+        24
+      ]
+    },
+    "L05": {
+      "proposed_day": 15,
+      "sessions_minutes": [
+        24,
+        24
+      ]
+    },
+    "L06": {
+      "proposed_day": 18,
+      "sessions_minutes": [
+        25,
+        25
+      ]
+    },
+    "L07": {
+      "proposed_day": 22,
+      "sessions_minutes": [
+        23,
+        25
+      ]
+    },
+    "L08": {
+      "proposed_day": 25,
+      "sessions_minutes": [
+        24,
+        26
+      ]
+    }
+  },
+  "miss_partial_low_confidence_days": 1,
+  "note": "Eight lesson headers total 403 minutes; 35 reviewable cards total 166 minutes for one pass; required delayed attempts total 107 minutes; setup about 5 minutes. Later repeats add time.",
+  "optional_guided_minutes": 120,
+  "pretest_once": [
+    "L01-P0",
+    "L01-P1",
+    "L01-P2",
+    "L02-P1",
+    "L02-P2",
+    "L03-P1",
+    "L03-P2",
+    "L04-P1",
+    "L04-P2",
+    "L05-P1",
+    "L05-P2",
+    "L06-P1",
+    "L06-P2",
+    "L07-P1",
+    "L07-P2",
+    "L08-P1",
+    "L08-P2"
+  ],
+  "review_budget_minutes": 5,
+  "review_cards": [
+    "L01-R0",
+    "L01-T0",
+    "L01-R1",
+    "L01-T1",
+    "L01-R2",
+    "L01-T2",
+    "L02-R1",
+    "L02-T1",
+    "L02-R2",
+    "L02-T2",
+    "L03-R1",
+    "L03-T1",
+    "L03-R2",
+    "L03-T2",
+    "L04-R1",
+    "L04-T1",
+    "L04-R2",
+    "L04-INT",
+    "L04-T2",
+    "L05-R1",
+    "L05-T1",
+    "L05-R2",
+    "L05-T2",
+    "L06-R1",
+    "L06-T1",
+    "L06-R2",
+    "L06-T2",
+    "L07-R1",
+    "L07-T1",
+    "L07-R2",
+    "L07-T2",
+    "L08-R1",
+    "L08-T1",
+    "L08-R2",
+    "L08-T2"
+  ],
+  "schema_version": 1,
+  "session_budget_minutes": 20,
+  "successful_review_gaps_days": [
+    3,
+    7,
+    14
+  ],
+  "minimum_one_review_pass_minutes": 681,
+  "review_budget_note": "Later spaced reviews, repairs and optional work are additional."
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "changes": [
+    {
+      "id": "transport",
+      "seam": "publication adapter",
+      "status": "EXERCISE",
+      "test": "checks/l08/adapter.sh",
+      "current": "The course encoder creates a local fictional frame.",
+      "acceptance": "Accept after an exact independent byte comparison and bounded input validation.",
+      "commit": "Local enqueue alone is not a durable commit boundary.",
+      "ack": "Return only a provisional transport result until the chosen gate is met.",
+      "replay_source": "Replay the same accepted frames from a trusted ordered copy.",
+      "failure_domain": "One host holds the local queue and can lose it."
+    },
+    {
+      "id": "sequencing",
+      "seam": "sequence assignment",
+      "status": "EXERCISE",
+      "test": "checks/l08/policy.sh",
+      "current": "The exercise assigns increasing sequence numbers to frames.",
+      "acceptance": "Reject a gap, duplicate sequence, bad epoch, or corrupt frame before mutation.",
+      "commit": "A sequence assignment is not itself a replicated or durable commit.",
+      "ack": "Reply with the original cached result after a committed request is applied.",
+      "replay_source": "Reconstruct state from a known prefix and its ordered suffix.",
+      "failure_domain": "A single writer and journal on one host share host loss."
+    },
+    {
+      "id": "journal",
+      "seam": "durable recording",
+      "status": "PROPOSAL",
+      "test": "checks/l08/model.sh",
+      "current": "The course has no durable journal implementation.",
+      "acceptance": "Propose admitting only framed requests whose bytes are fully validated.",
+      "commit": "Propose a recorded and synced prefix before durable acknowledgement.",
+      "ack": "Acknowledge after the specified durable gate and application result.",
+      "replay_source": "Read the committed prefix from verified journal files.",
+      "failure_domain": "Define whether journal copies occupy separate hosts and disks."
+    },
+    {
+      "id": "promotion",
+      "seam": "writer fencing",
+      "status": "PROPOSAL",
+      "test": "checks/l08/model.sh",
+      "current": "The release function is a local model, not an election protocol.",
+      "acceptance": "Fence a writer whose epoch differs from the active epoch.",
+      "commit": "Require a chosen quorum of synced copies before release.",
+      "ack": "Reconcile uncertain requests by their stable origin and request ID.",
+      "replay_source": "Start at the committed prefix and restore cached results.",
+      "failure_domain": "Two processes on one laptop share a failure domain."
+    },
+    {
+      "id": "snapshot",
+      "seam": "state checkpoint",
+      "status": "PROPOSAL",
+      "test": "checks/l08/policy.sh",
+      "current": "The exercise has no snapshot writer or recovery service.",
+      "acceptance": "Capture a consistent state at a named applied sequence.",
+      "commit": "Keep the checkpoint and suffix under one documented recovery policy.",
+      "ack": "Preserve original request results across a restore and retry.",
+      "replay_source": "Restore the checkpoint then apply an exact ordered suffix.",
+      "failure_domain": "Checkpoint and log placement determine joint-loss risk."
+    },
+    {
+      "id": "operations",
+      "seam": "load measurement",
+      "status": "EXERCISE",
+      "test": "checks/l08/performance.sh",
+      "current": "The course measures a supplied list of latency samples.",
+      "acceptance": "Count each accepted and delivered message before interpreting samples.",
+      "commit": "No latency sample is a durability or quorum commit.",
+      "ack": "Report sampled distribution separately from business acknowledgements.",
+      "replay_source": "Keep raw samples with the run configuration for review.",
+      "failure_domain": "A local numerical check says nothing about host or network loss."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Learner state and checkpoints
+progress.md
+progress*.json
+*.jsonl
+*.bak
+*.bak.*
+*.backup
+*.orig
+**/checkpoint-*/
+# Downloaded dependencies and generated output
+third_party/
+labs/lib/*.jar
+manifest/evidence/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.class
+.DS_Store
+# Local scratch and backups
+*.log
+*.tmp
+*.swp
+backup/
+backups/
+**/work/backups/
+/lesson-rewrite-claims.md
+/labs/l*/retrieval-*/
+progress*.json.lock
+/labs/l*/work/

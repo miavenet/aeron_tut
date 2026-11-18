@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "changes": [
+    {"id": "transport", "seam": "publication adapter", "status": "EXERCISE", "test": "checks/l08/adapter.sh"},
+    {"id": "sequencing", "seam": "sequence assignment", "status": "EXERCISE", "test": "checks/l08/policy.sh"},
+    {"id": "journal", "seam": "durable recording", "status": "PROPOSAL", "test": "checks/l08/model.sh"},
+    {"id": "promotion", "seam": "writer fencing", "status": "PROPOSAL", "test": "checks/l08/model.sh"},
+    {"id": "snapshot", "seam": "state checkpoint", "status": "PROPOSAL", "test": "checks/l08/policy.sh"},
+    {"id": "operations", "seam": "load measurement", "status": "EXERCISE", "test": "checks/l08/performance.sh"}
+  ]
+}
